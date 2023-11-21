@@ -1,9 +1,8 @@
 package ie.atu;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-
-public class WriteToFile {
+import java.io.PrintWriter;
+public class PrintWrite {
 
     public static void main(String[] args) {
 
@@ -15,15 +14,15 @@ public class WriteToFile {
         try {
             if (myFile.createNewFile()) {
                 System.out.println("File created successfully at " + myFile.getAbsolutePath());
-                FileWriter myWriter = new FileWriter(myFile, true);
-                myWriter.write("This is the first sentence of the text");
-                myWriter.close();
+                PrintWriter myPrintWriter = new PrintWriter(myFile);
+                myPrintWriter.write("This is my Second printWriter line\n");
+                myPrintWriter.close();
 
             } else {
                 System.out.println("File already exists at " + myFile.getAbsolutePath());
-                FileWriter myWriter = new FileWriter(myFile, true);
-                myWriter.write("\nThis is the fourth sentence of the text\n");
-                myWriter.close();
+                PrintWriter myPrintWriter = new PrintWriter(myFile);
+                myPrintWriter.write("This is my Second printWriter line\n");
+                myPrintWriter.close();
             }
         } catch (IOException e) {
             System.out.println("An error occurred while creating the file");
@@ -31,3 +30,4 @@ public class WriteToFile {
         }
     }
 }
+
