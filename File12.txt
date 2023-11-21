@@ -1,0 +1,7 @@
+This is the first sentence of the text
+This is the second sentence of the text
+This is the third sentence of the text
+
+This is the third sentence of the text
+
+This is the fourth sentence of the text
